@@ -11,9 +11,12 @@ def init_game():
         q.print_questao()
         q.print_alternativas()
 
-        choice = int(input())
+        choice = int(input("\n>> "))
 
         if (choice - 1) == q.resposta:
             pts += 1
+            print('Parabéns! Você acertou! 🥳🍾\n')
+        else:
+            print(f'Que pena, você errou! 😞\n')
 
     print(f'''PONTOS: {pts}''')
